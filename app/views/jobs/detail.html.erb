@@ -5,6 +5,12 @@
 
   <a class="btn btn-go btn-full" href="#">Add to job list</a>
 
+  <%= form_for @job  do |f| %>
+
+    <%= f.text_field :venue_address, value: (params[:meeting][:venue_address] if params[:meeting]) %>
+
+  <% end %>
+
   <%#
    ## this button add will be a form to create a new job with current user ID
 
