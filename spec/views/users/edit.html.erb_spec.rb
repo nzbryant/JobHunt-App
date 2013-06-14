@@ -6,10 +6,6 @@ describe "users/edit" do
       :name => "MyString",
       :email => "MyString",
       :password => "MyString",
-      :password_confirmation => "MyString",
-      :github => "MyString",
-      :photo => "MyString",
-      :email => "MyString",
     ))
   end
 
@@ -21,10 +17,6 @@ describe "users/edit" do
       assert_select "input#user_name[name=?]", "user[name]"
       assert_select "input#user_email[name=?]", "user[email]"
       assert_select "input#user_password[name=?]", "user[password]"
-      assert_select "input#user_password_confirmation[name=?]", "user[password_confirmation]"
-      assert_select "input#user_github[name=?]", "user[github]"
-      assert_select "input#user_photo[name=?]", "user[photo]"
-      assert_select "input#user_email[name=?]", "user[email]"
     end
   end
 end

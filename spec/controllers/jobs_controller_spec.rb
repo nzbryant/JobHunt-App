@@ -30,14 +30,6 @@ describe JobsController do
   # JobsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET index" do
-    it "assigns all jobs as @jobs" do
-      job = Job.create! valid_attributes
-      get :index, {}, valid_session
-      assigns(:jobs).should eq([job])
-    end
-  end
-
   describe "GET show" do
     it "assigns the requested job as @job" do
       job = Job.create! valid_attributes
