@@ -1,80 +1,40 @@
-<p id="notice"><%= notice %></p>
+<h2 class="text-center"><%= @user.name %></h2>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+  <%= image_tag avatar_url(@user, 80) %>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-go btn-full" %>
 
-<p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
+  <div class="joblist">
+    <h3>Your Job List</h3>
 
-<p>
-  <b>Password confirmation:</b>
-  <%= @user.password_confirmation %>
-</p>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Applied</th>
+        <th>Interview</th>
+        <th></th>
+      </tr>
 
-<p>
-  <b>Github:</b>
-  <%= @user.github %>
-</p>
+      <tr>
+        <td>Technical Account Manager</td>
+        <td>Yes</td>
+        <td>18/07/2013 at 10.00am</td>
+        <td><a href="#">Update/Edit/Destroy</a></td>
+      </tr>
 
-<p>
-  <b>Photo:</b>
-  <%= @user.photo %>
-</p>
+      <tr>
+        <td>Performance Specialist</td>
+        <td>No</td>
+        <td>-</td>
+        <td><a href="#">Update/Edit/Destroy</a></td>
+      </tr>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+      <tr>
+        <td>Software Engineer - PHP Generalist</td>
+        <td>No</td>
+        <td>-</td>
+        <td><a href="#">Update/Edit/Destroy</a></td>
+      </tr>
+    </table>
 
-<p>
-  <b>Encrypted password:</b>
-  <%= @user.encrypted_password %>
-</p>
-
-<p>
-  <b>Confirmation token:</b>
-  <%= @user.confirmation_token %>
-</p>
-
-<p>
-  <b>Confirmed at:</b>
-  <%= @user.confirmed_at %>
-</p>
-
-<p>
-  <b>Confirmation sent at:</b>
-  <%= @user.confirmation_sent_at %>
-</p>
-
-<p>
-  <b>Unconfirmed email:</b>
-  <%= @user.unconfirmed_email %>
-</p>
-
-<p>
-  <b>Remember created at:</b>
-  <%= @user.remember_created_at %>
-</p>
-
-<p>
-  <b>Reset password token:</b>
-  <%= @user.reset_password_token %>
-</p>
-
-<p>
-  <b>Reset password sent at:</b>
-  <%= @user.reset_password_sent_at %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+  </div>

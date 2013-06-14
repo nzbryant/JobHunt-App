@@ -1,22 +1,10 @@
-<h1>Listing users</h1>
+<h2 class="text-center">Listing All Users</h2>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Email</th>
-    <th>Password</th>
-    <th>Password confirmation</th>
     <th>Github</th>
-    <th>Photo</th>
-    <th>Email</th>
-    <th>Encrypted password</th>
-    <th>Confirmation token</th>
-    <th>Confirmed at</th>
-    <th>Confirmation sent at</th>
-    <th>Unconfirmed email</th>
-    <th>Remember created at</th>
-    <th>Reset password token</th>
-    <th>Reset password sent at</th>
     <th></th>
     <th></th>
     <th></th>
@@ -26,19 +14,7 @@
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
-    <td><%= user.password %></td>
-    <td><%= user.password_confirmation %></td>
     <td><%= user.github %></td>
-    <td><%= user.photo %></td>
-    <td><%= user.email %></td>
-    <td><%= user.encrypted_password %></td>
-    <td><%= user.confirmation_token %></td>
-    <td><%= user.confirmed_at %></td>
-    <td><%= user.confirmation_sent_at %></td>
-    <td><%= user.unconfirmed_email %></td>
-    <td><%= user.remember_created_at %></td>
-    <td><%= user.reset_password_token %></td>
-    <td><%= user.reset_password_sent_at %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -46,6 +22,3 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>

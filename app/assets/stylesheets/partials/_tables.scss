@@ -1,0 +1,31 @@
+table{
+    width:100%;
+}
+th{
+  display: none;
+  @include respond-to(beetle) {
+    display: table-cell;
+    padding: .3em;
+    text-align:left;
+  }
+}
+td{
+  display: block;
+  padding: 0 0 0.4em;
+  @include respond-to(beetle) {
+    display: table-cell;
+    padding: .3em;
+    text-align:left;
+  }
+}
+
+tr{
+  display: block;
+  border-bottom: 2px solid $midgrey;
+  margin-bottom: 0.4em;
+  @include respond-to(beetle) {
+    display: table-row;
+    border: none;
+    margin-bottom: 0;
+  }
+}

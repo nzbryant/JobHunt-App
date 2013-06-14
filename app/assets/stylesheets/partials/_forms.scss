@@ -1,0 +1,100 @@
+form{
+  max-width: 30em;
+  margin: 0 auto;
+  font-family: $sans-serif;
+  .required {
+    color: $errorcolor;
+  }
+  .field_with_errors{
+    input,
+    input[type="email"],
+    input[type="password"],
+    input[type="text"]
+    input[type="select"],
+    textarea{
+      color: $white;
+      background: $errorcolor;
+    }
+  }
+  label{
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0;
+  }
+  input[type="email"],
+  input[type="password"],
+  input[type="text"],
+  textarea{
+    width: 100%;
+    border: 1px solid $darkgrey;
+    padding: 0.4em 0.4em 0.3em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+  }
+  input[type="submit"]{
+    margin: 1em auto;
+    display: block;
+  }
+  input[type="checkbox"]{
+    position: relative;
+    top: 0.15em;
+    float: left;
+    margin-right: .3em;
+  }
+  input[type="file"]{
+    width: 100%;
+    color: $white;
+    margin: 0.3em 0 1.2em;
+  }
+  select{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .select-replace {
+    position: relative;
+    background: $white;
+    border: 1px solid $darkgrey;
+    width: 100%;
+    margin: 0 0 2em;
+    z-index: 0;
+    select{
+      position: relative;
+      background: transparent;
+      width: 100%;
+      min-width: auto;
+      padding: 0.4em 0.4em 0.3em;
+      margin: 0;
+      border: none;
+      font-size: 1.1em;
+      -webkit-appearance: none;
+      @include rounded(0px);
+      z-index: 2;
+    }
+    .arr{
+      color: $darkgrey;
+      position: absolute;
+      right: 10px;
+      top: 52%;
+      font-size: 4em;
+      line-height: .55;
+      z-index: 1;
+    }
+  }
+  .check_wrap{
+    float: left;
+    list-style: none;
+    margin:0.2em 0 1em;
+    padding: 0;
+    width: 100%;
+    li{
+      float: left;
+      width: 30%;
+      margin:0 2% 0.2em 0;
+    }
+  }
+  .checkbox_label{
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+}

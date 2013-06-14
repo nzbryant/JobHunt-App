@@ -1,0 +1,39 @@
+a.btn,
+.btn{
+  display:inline-block;
+  margin: 0;
+  padding:0.8em 1.2em;
+  border:none;
+  background: $infocolor;
+  color: $white;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-size: pem(14);
+  font-family: $sans-serif;
+  line-height:1;
+  cursor:pointer;
+  &:hover,
+  &.current{
+    background: darken($infocolor, 14);
+  }
+  &.btn-go{
+    background: $successcolor;
+    &:hover{
+      background: darken($successcolor, 20);
+    }
+  }
+  &.btn-delete{
+    background: $errorcolor;
+    &:hover{
+      background: darken($errorcolor, 20);
+    }
+  }
+  &.btn-full{
+    text-align: center;
+    margin: 0 auto 2em;
+    display: block;
+    max-width: 14em;
+  }
+}

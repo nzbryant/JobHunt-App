@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JobHunt</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Job Hunt App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <!-- Fonts -->
+  <script type="text/javascript" src="//use.typekit.net/kbm4giv.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+  <div class="wrapper">
 
-	<div id="user_nav">
-	  <% if current_user %>
-	    Logged in as <%= current_user.email %>.
-	   <%= link_to "Log out", log_out_path %>
-	  <% else %>
-	    <%= link_to "Sign up", sign_up_path %> or
-	    <%= link_to "log in", log_in_path %>
-	  <% end %>
-	</div>
+    <header role="banner">
+      <h1>Job Watch</h1>
+      <h2>A simple little app to help organise your job search</h2>
+    </header>
 
-	<% flash.each do |name, msg| %>
-	  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-	<% end %>
+    <nav role="primary">
+      <ul role="navigation">
+        <li><a href="#">Job Search</a></li>
+        <li><a href="#">Job List</a></li>
+        <li><a href="#">Profile</a></li>
+      </ul>
+    </nav>
 
-<%= yield %>
+    <%= yield %>
 
+  </div><%# wrapper %>
 </body>
 </html>
