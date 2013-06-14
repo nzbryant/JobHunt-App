@@ -1,6 +1,12 @@
 JobHunt::Application.routes.draw do
 
-  resources :jobs
+  resources :jobs do
+    collection do
+      get :search
+      get :results
+      get :detail
+    end
+  end
 
   resources :users
 

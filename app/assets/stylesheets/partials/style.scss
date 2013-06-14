@@ -185,8 +185,18 @@
 	@import "layouts";
 
 
+/* USERS
+   ========================================================================== */
+	.profile-thumb{
+		@include rounded(300px);
+		border: 6px solid $midgrey;
+		overflow: hidden;
+		margin: 0 auto 2em;
+		width: 140px;
+	}
 
-/* SEARCH RESULTS
+
+/* JOBS
    ========================================================================== */
 	.job-results{
 		margin: 0;
