@@ -11,35 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <div class="grid">
+    <div class="grid-row">
+      <div class="col-1-2">
+        <%= f.label :password %>
+        <%= f.text_field :password %>
+      </div>
+      <div class="col-1-2">
+        <%= f.label :password_confirmation %>
+        <%= f.text_field :password_confirmation %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.text_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :github %><br />
-    <%= f.text_field :github %>
-  </div>
-  <div class="field">
-    <%= f.label :photo %><br />
-    <%= f.text_field :photo %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+  <%= f.label :github, "Github Username" %>
+  <%= f.text_field :github %>
+
+  <%= f.submit :class => "btn btn-go" %>
+
 <% end %>
