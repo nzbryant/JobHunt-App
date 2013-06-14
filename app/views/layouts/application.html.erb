@@ -23,9 +23,8 @@
 
     <nav role="primary">
       <ul role="navigation">
-        <li><a href="#">Job Search</a></li>
-        <li><a href="#">Job List</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><%= link_to "Search Jobs", search_jobs_path, class: cp(search_jobs_path) %></li>
+        <li><a href="#">Your Profile</a></li>
       </ul>
     </nav>
 
