@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+  // REMOVE SUCCESS FLASH MESSAGE
+  $('.alert-success').delay(3000).slideUp();
+
