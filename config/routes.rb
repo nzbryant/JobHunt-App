@@ -10,6 +10,10 @@ JobHunt::Application.routes.draw do
 
   resources :users
 
-  root :to => "users#new"
+  root :to => "site#index"
+
+  get     "login", to: "users#login"
+  post    "sessions/create"
+  get     "sessions/destroy"
 
 end

@@ -18,10 +18,9 @@ class User < ActiveRecord::Base
   validates_presence_of :name
 
 
-  def self.authenticate(email, password)
-    user = find_by_email(email)
-    if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
-      user
+  def authenticate(password)
+    if self.password_hash == BCrypt::Engine.hash_secret(password, self.password_salt)
+      self
     else
       nil
     end

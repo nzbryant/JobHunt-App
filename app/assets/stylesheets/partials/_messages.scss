@@ -1,0 +1,37 @@
+
+
+/* MESSAGES & ALERTS
+  ========================================================================== */
+  .alert{
+    position: relative;
+    width: 100%;
+    padding: 0.6em 1em;
+    margin: 0;
+    text-align: center;
+    color: $white;
+    font-size: 1.2em;
+    &.alert-success{
+      background: $successcolor;
+    }
+    &.alert-error{
+      background: $errorcolor;
+    }
+  }
+  #error_explanation{
+    margin-bottom: 2em;
+    h2{
+      background: none;
+    }
+    ul{
+      font-size: 0.9em;
+      margin-bottom: 0;
+    }
+  }
+
+  .terms{
+    max-width: 36em;
+    margin: 2em auto;
+    h1{
+      margin-bottom: 1em;
+    }
+  }
