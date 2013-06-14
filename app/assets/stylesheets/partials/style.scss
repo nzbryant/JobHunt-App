@@ -141,6 +141,15 @@
 		max-width: 30em;
 		h1{
 			margin-bottom: 0.5em;
+			a{
+				text-decoration: none;
+				background: url(image_path('logo.png')) no-repeat top left;
+	      width: 300px;
+	      height: 70px;
+	      display: block;
+	      margin: 0 auto;
+	      background-size: 300px 70px;
+			}
 		}
 		h2{
 			font-size: 1em;
@@ -237,11 +246,16 @@
 	}
 
 	.joblist{
+		max-width: 47em;
+		margin: 0 auto;
 		h2{
 			text-align: center;
 		}
 	}
 
+	.choices{
+		margin: 2em 0 0;
+	}
 
 /* PRINT STYLES
    ========================================================================== */
