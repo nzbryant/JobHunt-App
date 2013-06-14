@@ -4,6 +4,7 @@ gem 'rails', '3.2.13'
 gem 'jquery-tablesorter'
 gem 'bson_ext'
 gem 'devise'
+gem 'turbolinks'
 
 gem 'thin'
 # Bundle edge Rails instead:

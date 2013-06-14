@@ -19,7 +19,13 @@
   <div class="wrapper">
 
     <header role="banner">
-      <h1>Job Watch</h1>
+      <h1 class="ir logo">
+        <% if current_user %>
+          <%= link_to 'Job Watch', current_user %>
+        <% else %>
+          <%= link_to 'Job Watch', root_path %>
+        <% end %>
+      </h1>
       <h2>A simple little app to help organise your job search</h2>
     </header>
 
