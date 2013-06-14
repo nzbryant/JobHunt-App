@@ -10,11 +10,7 @@ describe "users/new" do
       :github => "MyString",
       :photo => "MyString",
       :email => "MyString",
-      :encrypted_password => "MyString",
-      :confirmation_token => "MyString",
-      :unconfirmed_email => "MyString",
-      :reset_password_token => "MyString"
-    ).as_new_record)
+     ).as_new_record)
   end
 
   it "renders new user form" do
@@ -29,10 +25,6 @@ describe "users/new" do
       assert_select "input#user_github[name=?]", "user[github]"
       assert_select "input#user_photo[name=?]", "user[photo]"
       assert_select "input#user_email[name=?]", "user[email]"
-      assert_select "input#user_encrypted_password[name=?]", "user[encrypted_password]"
-      assert_select "input#user_confirmation_token[name=?]", "user[confirmation_token]"
-      assert_select "input#user_unconfirmed_email[name=?]", "user[unconfirmed_email]"
-      assert_select "input#user_reset_password_token[name=?]", "user[reset_password_token]"
-    end
+      end
   end
 end

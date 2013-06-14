@@ -11,10 +11,6 @@ describe "users/index" do
         :github => "Github",
         :photo => "Photo",
         :email => "Email",
-        :encrypted_password => "Encrypted Password",
-        :confirmation_token => "Confirmation Token",
-        :unconfirmed_email => "Unconfirmed Email",
-        :reset_password_token => "Reset Password Token"
       ),
       stub_model(User,
         :name => "Name",
@@ -24,10 +20,6 @@ describe "users/index" do
         :github => "Github",
         :photo => "Photo",
         :email => "Email",
-        :encrypted_password => "Encrypted Password",
-        :confirmation_token => "Confirmation Token",
-        :unconfirmed_email => "Unconfirmed Email",
-        :reset_password_token => "Reset Password Token"
       )
     ])
   end
@@ -42,9 +34,5 @@ describe "users/index" do
     assert_select "tr>td", :text => "Github".to_s, :count => 2
     assert_select "tr>td", :text => "Photo".to_s, :count => 2
     assert_select "tr>td", :text => "Email".to_s, :count => 2
-    assert_select "tr>td", :text => "Encrypted Password".to_s, :count => 2
-    assert_select "tr>td", :text => "Confirmation Token".to_s, :count => 2
-    assert_select "tr>td", :text => "Unconfirmed Email".to_s, :count => 2
-    assert_select "tr>td", :text => "Reset Password Token".to_s, :count => 2
   end
 end

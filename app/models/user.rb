@@ -1,17 +1,10 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-<<<<<<< HEAD
   attr_accessible :confirmation_sent_at, :confirmation_token, :confirmed_at, 
   :email, :encrypted_password, :github, :name, :password, 
   :password_confirmation, :photo, :remember_created_at, 
   :reset_password_sent_at, :reset_password_token, :unconfirmed_email, :password_hash, :password_salt
-=======
-  attr_accessible :confirmation_sent_at, :confirmation_token, :confirmed_at,
-  :email, :encrypted_password, :github, :name, :password,
-  :password_confirmation, :photo, :remember_created_at,
-  :reset_password_sent_at, :reset_password_token, :unconfirmed_email
->>>>>>> styles
 
   has_many :jobs
 

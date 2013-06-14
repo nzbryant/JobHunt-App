@@ -10,10 +10,7 @@ describe "users/show" do
       :github => "Github",
       :photo => "Photo",
       :email => "Email",
-      :encrypted_password => "Encrypted Password",
-      :confirmation_token => "Confirmation Token",
-      :unconfirmed_email => "Unconfirmed Email",
-      :reset_password_token => "Reset Password Token"
+      
     ))
   end
 
@@ -27,9 +24,6 @@ describe "users/show" do
     rendered.should match(/Github/)
     rendered.should match(/Photo/)
     rendered.should match(/Email/)
-    rendered.should match(/Encrypted Password/)
-    rendered.should match(/Confirmation Token/)
-    rendered.should match(/Unconfirmed Email/)
-    rendered.should match(/Reset Password Token/)
+    
   end
 end
