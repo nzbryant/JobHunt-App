@@ -1,11 +1,6 @@
 require 'spec_helper'
 
 describe User do
-  user = create(:user)
-  
-  it "has a valid factory" do
-    expect(subject).to be_valid
-  end
   
   it "should authenticate with matching username and password" do
     user = Factory(:user, :name => 'frank', :password => 'secret')
