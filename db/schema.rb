@@ -15,18 +15,14 @@ ActiveRecord::Schema.define(:version => 20130614113324) do
 
   create_table "jobs", :force => true do |t|
     t.string   "github_id"
-    t.datetime "created_at",   :null => false
     t.string   "title"
-    t.string   "location"
-    t.string   "type"
-    t.string   "description"
-    t.string   "how_to_apply"
     t.string   "company"
-    t.string   "company_url"
     t.string   "company_logo"
-    t.string   "url"
+    t.boolean  "applied"
+    t.datetime "interview_date"
     t.integer  "user_id"
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "sessions", :force => true do |t|
@@ -43,17 +39,10 @@ ActiveRecord::Schema.define(:version => 20130614113324) do
     t.string   "github"
     t.string   "photo"
     t.string   "encrypted_password"
-    t.string   "confirmation_token"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.datetime "remember_created_at"
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
 end

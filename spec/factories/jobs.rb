@@ -13,5 +13,7 @@ FactoryGirl.define do
     company_url "MyString"
     company_logo "MyString"
     url "MyString"
+    admin    false
   end
 end
+
