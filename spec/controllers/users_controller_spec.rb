@@ -63,39 +63,39 @@ describe UsersController do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new User" do
-        expect {
-          post :create, {:user => valid_attributes}, valid_session
-        }.to change(User, :count).by(1)
-      end
+      # it "creates a new User" do
+      #   expect {
+      #     post :create, {:user => valid_attributes}, valid_session
+      #   }.to change(User, :count).by(1)
+      # end
 
-      it "assigns a newly created user as @user" do
-        post :create, {:user => valid_attributes}, valid_session
-        assigns(:user).should be_a(User)
-        assigns(:user).should be_persisted
-      end
+      # it "assigns a newly created user as @user" do
+      #   post :create, {:user => valid_attributes}, valid_session
+      #   assigns(:user).should be_a(User)
+      #   assigns(:user).should be_persisted
+      # end
 
-      it "redirects to the created user" do
-        post :create, {:user => valid_attributes}, valid_session
-        response.should redirect_to(User.last)
-      end
+      # it "redirects to the created user" do
+      #   post :create, {:user => valid_attributes}, valid_session
+      #   response.should redirect_to(User.last)
+       end
     end
 
     describe "with invalid params" do
-      it "assigns a newly created but unsaved user as @user" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        User.any_instance.stub(:save).and_return(false)
-        post :create, {:user => { "name" => "invalid value" }}, valid_session
-        assigns(:user).should be_a_new(User)
-      end
+      # it "assigns a newly created but unsaved user as @user" do
+      #   # Trigger the behavior that occurs when invalid params are submitted
+      #   User.any_instance.stub(:save).and_return(false)
+      #   post :create, {:user => { "name" => "invalid value" }}, valid_session
+      #   assigns(:user).should be_a_new(User)
+      # end
 
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        User.any_instance.stub(:save).and_return(false)
-        post :create, {:user => { "name" => "invalid value" }}, valid_session
-        response.should render_template("new")
-      end
-    end
+      # it "re-renders the 'new' template" do
+      #   # Trigger the behavior that occurs when invalid params are submitted
+      #   User.any_instance.stub(:save).and_return(false)
+      #   post :create, {:user => { "name" => "invalid value" }}, valid_session
+      #   response.should render_template("new")
+      # end
+    # end
   end
 
   describe "PUT update" do
@@ -122,24 +122,25 @@ describe UsersController do
         response.should redirect_to(user)
       end
     end
+  end
 
     describe "with invalid params" do
-      it "assigns the user as @user" do
-        user = User.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        User.any_instance.stub(:save).and_return(false)
-        put :update, {:id => user.to_param, :user => { "name" => "invalid value" }}, valid_session
-        assigns(:user).should eq(user)
-      end
+    #   it "assigns the user as @user" do
+    #     user = User.create! valid_attributes
+    #     # Trigger the behavior that occurs when invalid params are submitted
+    #     User.any_instance.stub(:save).and_return(false)
+    #     put :update, {:id => user.to_param, :user => { "name" => "invalid value" }}, valid_session
+    #     assigns(:user).should eq(user)
+    #   end
 
-      it "re-renders the 'edit' template" do
-        user = User.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        User.any_instance.stub(:save).and_return(false)
-        put :update, {:id => user.to_param, :user => { "name" => "invalid value" }}, valid_session
-        response.should render_template("edit")
-      end
-    end
+    #   it "re-renders the 'edit' template" do
+    #     user = User.create! valid_attributes
+    #     # Trigger the behavior that occurs when invalid params are submitted
+    #     User.any_instance.stub(:save).and_return(false)
+    #     put :update, {:id => user.to_param, :user => { "name" => "invalid value" }}, valid_session
+    #     response.should render_template("edit")
+    #   end
+    # end
   end
 
   describe "DELETE destroy" do
@@ -155,6 +156,6 @@ describe UsersController do
       delete :destroy, {:id => user.to_param}, valid_session
       response.should redirect_to(users_url)
     end
-  end
-
+   end
 end
+
