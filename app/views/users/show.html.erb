@@ -1,11 +1,13 @@
 <h2 class="text-center"><%= @user.name %></h2>
 
-  <%= image_tag avatar_url(@user, 80) %>
+  <div class="profile-thumb">
+    <%= image_tag avatar_url(@user, 140) %>
+  </div>
 
   <%= link_to 'Edit Profile', edit_user_path(@user), class: "btn btn-go btn-full" %>
 
   <div class="joblist">
-    <h3>Your Job List</h3>
+    <h3 class="text-center">Your Job List</h3>
 
     <table>
       <tr>

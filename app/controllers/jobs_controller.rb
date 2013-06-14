@@ -10,6 +10,24 @@ class JobsController < ApplicationController
     end
   end
 
+  # GET /jobs/search
+  def search
+    # nothing to add here, simply show the view with the form.
+    # perhaps add in the list of sectors to the model or here.
+  end
+
+  # GET /jobs/results
+  def results
+    # This is where the API comes into play and take the data captured
+    # in the URL Params to create an object to loop over....
+  end
+
+  # GET /jobs/detail
+  def detail
+    # This should display the full job detail based on the ID lookup from results?
+  end
+
+
   # GET /jobs/1
   # GET /jobs/1.json
   def show
