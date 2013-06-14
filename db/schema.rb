@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20130614113324) do
     t.string   "photo"
     t.string   "encrypted_password"
     t.string   "confirmation_token"
+    t.string   "password_hash"
+    t.string   "password_salt"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
