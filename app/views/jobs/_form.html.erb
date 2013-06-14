@@ -11,51 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :github_id %><br />
-    <%= f.text_field :github_id %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br />
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :how_to_apply %><br />
-    <%= f.text_field :how_to_apply %>
-  </div>
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
-  </div>
-  <div class="field">
-    <%= f.label :company_url %><br />
-    <%= f.text_field :company_url %>
-  </div>
-  <div class="field">
-    <%= f.label :company_logo %><br />
-    <%= f.text_field :company_logo %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.label :github_id %><br />
+  <%= f.text_field :github_id %>
+
+  <%= f.label :created_at %><br />
+  <%= f.datetime_select :created_at %>
+
+  <%= f.label :title %><br />
+  <%= f.text_field :title %>
+
+  <%= f.submit %>
+
 <% end %>

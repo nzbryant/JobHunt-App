@@ -24,6 +24,7 @@ class JobsController < ApplicationController
 
   # GET /jobs/detail
   def detail
+    @job = Job.new
     # This should display the full job detail based on the ID lookup from results?
   end
 
