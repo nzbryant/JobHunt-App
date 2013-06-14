@@ -14,6 +14,8 @@
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+  <%= render partial: "shared/messages" %>
+
   <div class="wrapper">
 
     <header role="banner">
@@ -21,12 +23,15 @@
       <h2>A simple little app to help organise your job search</h2>
     </header>
 
-    <nav role="primary">
-      <ul role="navigation">
-        <li><%= link_to "Search Jobs", search_jobs_path, class: cp(search_jobs_path) %></li>
-        <li><a href="#">Your Profile</a></li>
-      </ul>
-    </nav>
+    <% if current_user %>
+      <nav role="primary">
+        <ul role="navigation">
+          <li><%= link_to "Search Jobs", search_jobs_path, class: cp(search_jobs_path) %></li>
+          <li><%= link_to "Your Profile", user_path(current_user), class: cp(user_path(current_user)) %></li>
+          <li><%= link_to 'Sign out', sessions_destroy_path %></li>
+        </ul>
+      </nav>
+    <% end %>
 
     <%= yield %>
 
